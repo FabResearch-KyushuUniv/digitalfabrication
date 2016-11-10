@@ -1,5 +1,6 @@
 # デジタルファブリケーション(コード)
-[processing](https://processing.org/)を使って、2D,3Dを描画していきます。
+[processing](https://processing.org/)を使って、2D,3Dを描画していきます。上の"Clone or download"→"Download ZIP"
+
 + processingとは → [Processing とは - Processing 学習ノート](http://www.d-improvement.jp/learning/processing/class/about-processing.html)
  * オープンソースで開発されているプログラミング言語&統合開発環境
  * 視覚的な表現（イメージの生成、アニメーション、インタラクション）が他のプログラミング言語に比べてやりやすい
