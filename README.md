@@ -11,4 +11,9 @@
  * バージョン管理ができる → Gitだから[サルでもわかるGit入門](http://www.backlog.jp/git-guide/intro/intro1_1.html)
  * 基本的に作ったプログラムは公開される
  
-## 
+## processingを触ってみる
+
+## 2Dのデータを作る
+
+## 3Dのデータを作る
+(久恒)
