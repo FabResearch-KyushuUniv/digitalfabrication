@@ -1,5 +1,7 @@
 # デジタルファブリケーション(コード)
-[processing](https://processing.org/)を使って、2D,3Dを描画していきます。上の"Clone or download"→"Download ZIP"
+初回3回分の授業はここを元に進めていきます。
+[processing](https://processing.org/)を使って、2D,3Dを描画していきます。
+上の"Clone or download"→"Download ZIP"で使うファイルをダウンロードしてください。
 
 + processingとは → [Processing とは - Processing 学習ノート](http://www.d-improvement.jp/learning/processing/class/about-processing.html)
  * オープンソースで開発されているプログラミング言語&統合開発環境
@@ -12,6 +14,10 @@
  * 基本的に作ったプログラムは公開される
  
 ## processingを触ってみる
+1. processingを開く
+1. とりあえず矢印ボタン"実行する"を押してみる → ちっさいグレーの画面が出る
+1. ファイル → サンプル → "Basics"の中から好きなプログラムを開いてみる(Color,Input,Shapeあたりが面白い？)
+## 基本
 
 ## 2Dのデータを作る
 
