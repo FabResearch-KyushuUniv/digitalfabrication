@@ -18,7 +18,9 @@
 1. とりあえず矢印ボタン"実行する"を押してみる → ちっさいグレーの画面が出る
 1. ファイル → サンプル → "Basics"の中から好きなプログラムを開いてみる(Color,Input,Shapeあたりが面白い？)
 1. processingの[reference](https://processing.org/reference/)
-## 基本
+
+## 基本のプログラム
+
 
 ## 2Dのデータを作る
 
