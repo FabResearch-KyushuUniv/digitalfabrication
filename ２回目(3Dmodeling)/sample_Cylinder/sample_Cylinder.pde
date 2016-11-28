@@ -1,4 +1,4 @@
-// LIBRARY (いじらなくて大丈夫)
+// LIBRARY
 import wblut.math.*;
 import wblut.processing.*;
 import wblut.core.*;
@@ -12,7 +12,7 @@ HE_Mesh MESH; // Our mesh object
 WB_Render RENDER; // Our render object
 //HEC_Cube creator; // Our creator object
 
-// CAM カメラ用のライブラリと宣言
+// CAM
 import peasy.*;
 PeasyCam CAM;
 
@@ -20,41 +20,32 @@ PeasyCam CAM;
 
 void setup() {
   size(800, 600, OPENGL);
-  CAM = new PeasyCam(this, 150);  //カメラ用
+  CAM = new PeasyCam(this, 150);  
 
-/***********************************
-********   HEC  *******************
-************************************/
   //クリエイターを作る
-  HEC_Box creator = new HEC_Box(); // Our creator 
+  HEC_Cylinder creator = new HEC_Cylinder(); // Our creator 
 
   //クリエイターのパラメーターを設定する。
-  creator.setWidth(200);
-  creator.setHeight(100);
-  creator.setDepth(150);
-  
-  /*
-  ちなみに上の命令は重ねて、 creator.setWidth(200).setHeight(100).setDepth(50);とすることもできます！
-  */
-  
-/***********************************
-********   HE  *******************
-************************************/
-  //HEの部分　 クリエイターをメッシュにする。
+  //creator.setEdge(60); 
+  //クリエイターをメッシュにする。
   MESH = new HE_Mesh(creator);  // ADD OUR CREATOR PARAMETERS TO OUR MESH
 
-
-/***********************************
-********   HEM  *******************
-************************************/
-
   // モディファイアを設定する
-  // 今回はBoxを各頂点から20の距離の平面でカットする。
-  HEM_ChamferCorners chamfer = new HEM_ChamferCorners();
-  chamfer.setDistance(20);
+  //HEM_ChamferCorners chamfer = new HEM_ChamferCorners().setDistance(20);
+  //HEM_ChamferEdges edges = new HEM_ChamferEdges().setDistance(5);
+  //HEM_Extrude sp = new HEM_Extrude().setDistance(20);
+  HEM_Crocodile cro = new HEM_Crocodile().setDistance(60);
+  HEM_ChamferCorners cor = new HEM_ChamferCorners().setDistance(30);
+  HEM_SmoothInset lat = new HEM_SmoothInset().setOffset(20);
 
   // モディファイアをメッシュに適用する。
-  MESH.modify(chamfer);
+  //MESH.modify( chamfer ); // ADD OUR MODIFIER TO THE MESH
+  //MESH.modify( edges );
+  //MESH.modify(ex);
+  //MESH.modify(sp);
+  MESH.modify(cro);
+  MESH.modify(cor);
+  MESH.modify(lat);
   
 
   //レンダリング用
@@ -64,7 +55,7 @@ void setup() {
 /////////////////////////// DRAW ////////////////////////////
 void draw() {
   background(255);
-  //CAMERA用
+  //CAMERA
   CAM.beginHUD(); // this method disables PeasyCam for the commands between beginHUD & endHUD
   directionalLight(255, 255, 255, 1, 1, -1);
   directionalLight(127, 127, 127, -1, -1, 1);
@@ -74,12 +65,8 @@ void draw() {
   //ここからレンダリング
   stroke(0, 0, 255);
   strokeWeight( 2 );
-  noFill();
   //fill(0,0,255);
-   RENDER.drawEdges( MESH ); //辺を青色、太さ２で描く
-   noStroke();
-   fill(0,255,0);
-   RENDER.drawFaces(MESH); //面を緑で描く
+   RENDER.drawEdges( MESH ); //Draw MESH edges
    //ここまで
 }
 
