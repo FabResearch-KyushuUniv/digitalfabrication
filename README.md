@@ -51,4 +51,12 @@ processingの初歩をまず最初にやって、最終的に2DのデータをSV
 
 processingの[reference](https://processing.org/reference/)とか見るのが一番捗ると思います。
 ## 3Dのデータを作る
-(久恒)
+1. 必要なソフトウェア
+    + [Processing](https://processing.org/)
+    + [MeshMixer](http://www.meshmixer.com/)
+1. 必要なライブラリ
+    + [HE_MESH](http://wblut.com/hemesh/hemesh-latest.zip)
+    + [controlp5](https://github.com/sojamo/controlp5/releases/download/v2.2.5/controlP5-2.2.5.zip)
+    + [PeasyCAM](http://mrfeinberg.com/peasycam/peasycam_202.zip)
+1. 本日のスライド
+    + [Processingで3Dモデリング](https://docs.google.com/presentation/d/1LprM52UdkLDuXwQy9uJExOAAFGkIJyMmZ6EiOyBZwLs/edit?usp=sharing)
