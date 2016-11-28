@@ -79,6 +79,6 @@ void keyPressed() {
   if (key == 'e') {
     // stlで書き出し
     MESH.triangulate();
-    HET_Export.saveToSTL(MESH, sketchPath("export.stl"), "test");
+    HET_Export.saveToSTL(MESH, sketchPath("export"), "test");
   }
 }

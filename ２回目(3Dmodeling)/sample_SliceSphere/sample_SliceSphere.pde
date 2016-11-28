@@ -27,39 +27,33 @@ void setup() {
   CAM = new PeasyCam(this, 150);  
 
   //クリエイターを作る
-  HEC_Dodecahedron creator = new HEC_Dodecahedron().setOuterRadius(25); // Our creator 
+  HEC_Sphere creator = new HEC_Sphere();
   
   //クリエイターのパラメーターを設定する。
-  //creator.setEdge(60); 
+  creator.setRadius(60).setUFacets(20).setVFacets(20);
   //クリエイターをメッシュにする。
   MESH = new HE_Mesh(creator);  // ADD OUR CREATOR PARAMETERS TO OUR MESH
   
   SELECTION = new HE_Selection( MESH );
 
   // モディファイアを設定する
-  HEM_ChamferCorners cham = new HEM_ChamferCorners().setDistance(1);
-  MESH.modify(cham); MESH.modify(cham);
-  
-  
-  
-  WB_Plane[] planes = new WB_Plane[5];
-  for(int i=0;i<5;i++){
-    planes[i] = new WB_Plane(random(-50,50),random(-50,50),random(-50,50),
-                              random(-1,1),random(-1,1),random(-1,1));
-    HEM_SliceSurface mss = new HEM_SliceSurface().setPlane(planes[i]);
-    MESH.modify(mss);
-  }
   Iterator<HE_Face> fItr = MESH.fItr();
   HE_Face f;
   while(fItr.hasNext()){
     f = fItr.next();
-    if(random(200) < 50){
-       SELECTION.add(f);
+    if(random(200)<50){
+      SELECTION.add(f);
     }
   }
-  
   HEM_Lattice lat = new HEM_Lattice().setDepth(2).setWidth(1).setFuse(true);
   MESH.modifySelected(lat,SELECTION);
+  
+  HEM_Slice sli = new HEM_Slice().setPlane(new WB_Plane(0,0,0,1,0,1));
+  MESH.modify(sli);
+  /*
+  HEM_ChamferCorners cham = new HEM_ChamferCorners().setDistance(1);
+  MESH.modify(cham); MESH.modify(cham);
+  */
   
   HES_Smooth cc = new HES_Smooth();
   MESH.subdivide(cc);
