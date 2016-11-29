@@ -8,11 +8,11 @@ import processing.opengl.*;
 import java.util.*;
 
 
-// HEMESH CLASSES & OBJECTS
+// HEMESH CLASSES & OBJECTS  セレクターも宣言している点に注意
 HE_Mesh MESH,MESH2; // Our mesh object
 WB_Render RENDER; // Our render object
 //HEC_Cube creator; // Our creator object
-HE_Selection SELECTION;
+HE_Selection SELECTION; //セレクター
 
 boolean meshappeared = false;
 
@@ -26,27 +26,31 @@ void setup() {
   size(800, 600, OPENGL);
   CAM = new PeasyCam(this, 150);  
 
-  //クリエイターを作る
+  //クリエイターを作る 球形
   HEC_Sphere creator = new HEC_Sphere();
   
-  //クリエイターのパラメーターを設定する。
+  //クリエイターのパラメーターを設定する。 大きさ20, 縦の分割線20,横の分割線20
   creator.setRadius(60).setUFacets(20).setVFacets(20);
+  
   //クリエイターをメッシュにする。
   MESH = new HE_Mesh(creator);  // ADD OUR CREATOR PARAMETERS TO OUR MESH
   
+  //どのメッシュの面をセレクターで選択するのかを指定します。
   SELECTION = new HE_Selection( MESH );
 
   // モディファイアを設定する
-  Iterator<HE_Face> fItr = MESH.fItr();
-  HE_Face f;
-  while(fItr.hasNext()){
-    f = fItr.next();
-    if(random(200)<50){
-      SELECTION.add(f);
+  Iterator<HE_Face> fItr = MESH.fItr(); //イテレータ(メッシュの中の面を数えられる、仮想の番号みたいなの)を宣言します。
+  HE_Face f; //面を選択するので、HE_Faceを宣言します。
+  while(fItr.hasNext()){ //次の番号がある間
+    f = fItr.next(); //次の番号の面へ、対象の面を移動します。
+    if(random(200)<50){ //適当な200以下のランダムな数字を生成し、それが50以下なら
+      SELECTION.add(f); //その面をセレクターに加え、選択している扱いにします。
     }
   }
+  
+  // 格子のモディファイア
   HEM_Lattice lat = new HEM_Lattice().setDepth(2).setWidth(1).setFuse(true);
-  MESH.modifySelected(lat,SELECTION);
+  MESH.modifySelected(lat,SELECTION); //MESH.modiftSelected(モディファイアの名前、セレクター)とすることで、対象の面にだけモディファイアをかけることができます。
   
   HEM_Slice sli = new HEM_Slice().setPlane(new WB_Plane(0,0,0,1,0,1));
   MESH.modify(sli);
@@ -55,6 +59,7 @@ void setup() {
   MESH.modify(cham); MESH.modify(cham);
   */
   
+  //重い場合は下の二行はコメントアウトしてください。
   HES_Smooth cc = new HES_Smooth();
   MESH.subdivide(cc);
   

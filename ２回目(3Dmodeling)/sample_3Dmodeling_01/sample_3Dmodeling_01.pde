@@ -7,7 +7,7 @@ import wblut.geom.*;
 import processing.opengl.*;
 
 
-// HEMESH CLASSES & OBJECTS
+// HEMESH CLASSES & OBJECTS グローバルでメッシュとレンダラーをまず宣言
 HE_Mesh MESH; // Our mesh object
 WB_Render RENDER; // Our render object
 //HEC_Cube creator; // Our creator object
@@ -28,7 +28,7 @@ void setup() {
   //クリエイターを作る
   HEC_Box creator = new HEC_Box(); // Our creator 
 
-  //クリエイターのパラメーターを設定する。
+  //クリエイターのパラメーターを設定する。それぞれの固有の命令はProcessing/libraries/hemesh/references/index.htmlを見て下さい。
   creator.setWidth(200);
   creator.setHeight(100);
   creator.setDepth(150);
