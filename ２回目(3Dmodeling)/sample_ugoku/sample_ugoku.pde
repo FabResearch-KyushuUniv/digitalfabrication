@@ -76,7 +76,7 @@ void draw() {
   bendCounter++;
   
   WB_Plane plane3 = new WB_Plane(0,0,1,-1,0,-1);
-  bend3 = new HEM_Bend().setGroundPlane(plane3).setBendAxis(0,-1,1,0,0,-1).setAngleFactor((mouseX/2 - mouseX) * 0.0001);
+  bend3 = new HEM_Bend().setGroundPlane(plane3).setBendAxis(0,-1,1,0,0,-1).setAngleFactor((width/2 - mouseX) * 0.0001);
   MESH.modify(bend3);
   //ここからレンダリング
   stroke(0, 0, 255);
