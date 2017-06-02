@@ -1,12 +1,10 @@
 # デジタルファブリケーション - processing（2D,3D）
 平成29年度前期の集中講義「デジタルファブリケーション コード・マシン・ハンド」のprocessingの授業はここを元に進めていきます。
 
-[28年度の作品](https://goo.gl/photos/uz35vBEnawPBh1JL8)
+[28年度の作品（2D,3D）](https://goo.gl/photos/uz35vBEnawPBh1JL8)
 
-平成28年度では[processing](https://processing.org/)を使って、2D,3Dを描画しました。
-平成29年度では2Dをprocessing、3Dを[openSCAD](https://github.com/FabResearch-KyushuUniv/digifab17_openscad)で描画します。
-
-上の"Clone or download"→"Download ZIP"で使うファイルをダウンロードしてください。
+平成28年度では[processing](https://processing.org/)を使って、2D,3Dを描画しました。平成29年度では2Dをprocessing、3Dを[openSCAD](https://github.com/FabResearch-KyushuUniv/digifab17_openscad)で描画します。
+右上の"Clone or download"→"Download ZIP"で使うファイルをダウンロードしてください。
 
 + processingとは → [Processing とは - Processing 学習ノート](http://www.d-improvement.jp/learning/processing/class/about-processing.html)
  * オープンソースで開発されているプログラミング言語&統合開発環境
@@ -43,21 +41,21 @@
 
 ## 2Dのデータを作る
 processingの初歩をまず最初にやって、最終的に2DのデータをSVGで書き出します。
-### processingで何か書く
+### + processingで何か書く
 /01-sample_firstと/02-sample_drawを参照してください。
-### マウス、if文
+### + マウス、if文
 /03-sample_mouseを参照してください。
-### for文、乱数の生成
+### + for文、乱数の生成
 /04-sample_randomを参照してください。
-### SVGの書き出し
+### + SVGの書き出し
 /05-sample_svgと/06-sample_svg_v2を参照してください。
 
-### 以下、余裕があれば見てみてください
-#### 配列
+### (以下、余裕があれば見てみてください)
+#### + 配列
 /ex01-sample_mouse_2を参照してください。
-#### マイク
+#### + マイク
 /ex02-sample_soundを参照してください。
-#### 波形の描画
+#### + 波形の描画
 /ex03-sample_waveを参照してください。
 
 processingの[reference](https://processing.org/reference/)とか見るのが一番捗ると思います。
