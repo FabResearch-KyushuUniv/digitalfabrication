@@ -42,21 +42,21 @@
 ## 2Dのデータを作る
 processingの初歩をまず最初にやって、最終的に2DのデータをSVGで書き出します。
 ### ・ processingで何か書く
-/01-sample_firstと/02-sample_drawを参照してください。
+/sample01_firstと/sample02_drawを参照してください。
 ### ・ マウス、if文
-/03-sample_mouseを参照してください。
+/sample03_mouseを参照してください。
 ### ・ for文、乱数の生成
-/04-sample_randomを参照してください。
+/sample04_randomを参照してください。
 ### ・ SVGの書き出し
-/05-sample_svgと/06-sample_svg_v2を参照してください。
+/sample05_svgと/sample06_svg_v2を参照してください。
 
 ### (以下、余裕があれば見てみてください)
 #### ・ 配列
-/ex01-sample_mouse_2を参照してください。
+/sample07_mouse_2を参照してください。
 #### ・ マイク
-/ex02-sample_soundを参照してください。
+/sample08_soundを参照してください。
 #### ・ 波形の描画
-/ex03-sample_waveを参照してください。
+/sample09_waveを参照してください。
 
 processingの[reference](https://processing.org/reference/)とか見るのが一番捗ると思います。
 
