@@ -1,7 +1,11 @@
-# デジタルファブリケーション(コード)
-平成28年度後期の集中講義「デジタルファブリケーション ~コード・マシン・ハンド~」の初回3回分の授業はここを元に進めていきました。
-[28年度の作品とか](https://goo.gl/photos/uz35vBEnawPBh1JL8)
-[processing](https://processing.org/)を使って、2D,3Dを描画していきます。
+# デジタルファブリケーション - processing（2D,3D）
+平成29年度前期の集中講義「デジタルファブリケーション コード・マシン・ハンド」のprocessingの授業はここを元に進めていきます。
+
+[28年度の作品](https://goo.gl/photos/uz35vBEnawPBh1JL8)
+
+平成28年度では[processing](https://processing.org/)を使って、2D,3Dを描画しました。
+平成29年度では2Dをprocessing、3Dを[openSCAD](https://github.com/FabResearch-KyushuUniv/digifab17_openscad)で描画します。
+
 上の"Clone or download"→"Download ZIP"で使うファイルをダウンロードしてください。
 
 + processingとは → [Processing とは - Processing 学習ノート](http://www.d-improvement.jp/learning/processing/class/about-processing.html)
@@ -25,14 +29,14 @@
   + "数字"とか"文字"とかが入る箱
   + 変数はint(整数), float(浮動小数), String(文字列)とかがある
   + [http://www9.plala.or.jp/sgwr-t/c/sec02.html#s2-2](http://www9.plala.or.jp/sgwr-t/c/sec02.html#s2-2)
-1. 演算子
+2. 演算子
   + 変数を計算するときに使う
   + "+", "-", "\*", "/", "%", "="とかがある。
   + [http://www9.plala.or.jp/sgwr-t/c/sec03.html](http://www9.plala.or.jp/sgwr-t/c/sec03.html)
-1. 関数
+3. 関数
   + 変数とか他の関数とかが入ってる"でかい箱"
   + プログラムを処理する部分
-1. 制御文
+4. 制御文
   + プログラムを場合分けとか繰り返しとかしてくれる
   + ifとかforとかwhileとかがある。
   + [http://www9.plala.or.jp/sgwr-t/c/sec06.html](http://www9.plala.or.jp/sgwr-t/c/sec06.html)
@@ -40,17 +44,24 @@
 ## 2Dのデータを作る
 processingの初歩をまず最初にやって、最終的に2DのデータをSVGで書き出します。
 ### processingで何か書く
-/sample_firstと/sample_drawを参照してください。
-### マウス
-/sample_mouseと/sample_mouse_2を参照してください。
-### 波形の描画
-/sample_waveを参照してください。
-### マイク
-/sample_soundを参照してください。
+/01-sample_firstと/02-sample_drawを参照してください。
+### マウス、if文
+/03-sample_mouseを参照してください。
+### for文、乱数の生成
+/04-sample_randomを参照してください。
 ### SVGの書き出し
-/sample_svgと/sample_svg_v2を参照してください。
+/05-sample_svgと/06-sample_svg_v2を参照してください。
+
+### 以下、余裕があれば見てみてください
+#### 配列
+/ex01-sample_mouse_2を参照してください。
+#### マイク
+/ex02-sample_soundを参照してください。
+#### 波形の描画
+/ex03-sample_waveを参照してください。
 
 processingの[reference](https://processing.org/reference/)とか見るのが一番捗ると思います。
+
 ## 3Dのデータを作る
 1. 必要なソフトウェア
     + [Processing](https://processing.org/)
@@ -62,7 +73,7 @@ processingの[reference](https://processing.org/reference/)とか見るのが一
 1. 本日のスライド
     + [Processingで3Dモデリング](https://docs.google.com/presentation/d/1LprM52UdkLDuXwQy9uJExOAAFGkIJyMmZ6EiOyBZwLs/edit?usp=sharing)
 
-###サンプルについて
+### サンプルについて
 1. sample_3Dmodeling_01
     + HEC->HE->HEMの流れを説明しているサンプルです。ここではBox(直方体)を作り(HEC)、メッシュ化(HE)しその頂点をカット(HEM)し、しています。
 2. sample_Mesh
